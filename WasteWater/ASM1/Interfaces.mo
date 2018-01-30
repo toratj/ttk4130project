@@ -136,12 +136,15 @@ air between blower and nitrification tank."));
     WWU.MassConcentration Xs(fixed=true) "Slowly biodegradable substrate";
     WWU.MassConcentration Xbh(fixed=true) "Active heterotrophic biomass";
     WWU.MassConcentration Xba(fixed=true) "Active autotrophic biomass";
-    WWU.MassConcentration Xp(fixed=true) "Particulate products from biomass decay";
+    WWU.MassConcentration Xp(fixed=true)
+      "Particulate products from biomass decay";
     WWU.MassConcentration So(fixed=true) "Dissolved oxygen";
     WWU.MassConcentration Sno(fixed=true) "Nitrate and nitrite nitrogen";
     WWU.MassConcentration Snh(fixed=true) "Ammonium nitrogen";
-    WWU.MassConcentration Snd(fixed=true) "Soluble biodegradable organic nitrogen";
-    WWU.MassConcentration Xnd(fixed=true) "Particulate biodegradable organic nitrogen";
+    WWU.MassConcentration Snd(fixed=true)
+      "Soluble biodegradable organic nitrogen";
+    WWU.MassConcentration Xnd(fixed=true)
+      "Particulate biodegradable organic nitrogen";
     WWU.Alkalinity Salk(fixed=true) "Alkalinity";
     Real p1;
     Real p2;

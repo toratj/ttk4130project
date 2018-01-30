@@ -3,7 +3,6 @@ package ASM1 "Component models for the Activated Sludge Model No.1"
 extends Modelica.Icons.Library;
 
 
-
 model deni "ASM1 denitrification tank"
   //denitrification tank based on the ASM1 model
 
@@ -866,6 +865,7 @@ of ASM1 wastewater and provides the result as output signal (to be
 further processed with blocks of the Modelica.Blocks library).
 "));
 end sensor_TSS;
+
 
 annotation (
   Documentation(info="This library contains components to build models of biological municipal
