@@ -211,7 +211,7 @@ Main Author:
             extent={{-114,78},{-94,98}}, rotation=0)));
     ASM1.WWSource WWSource annotation (Placement(transformation(extent={{-10,-10},
               {10,10}},  rotation=270,
-          origin={-101,61})));
+          origin={-108,54})));
     ASM1.sensor_NO sensor_NO annotation (Placement(transformation(extent={{-42,
               48},{-22,68}}, rotation=0)));
     ASM1.sensor_O2 sensor_O2 annotation (Placement(transformation(extent={{1,25},
@@ -246,10 +246,10 @@ Main Author:
     WasteWater.ASM1.nitri_new tank5
       annotation (Placement(transformation(extent={{-6,-6},{14,14}})));
     WasteWater.ASM1.WWSourceConstant wWSourceConstant
-      annotation (Placement(transformation(extent={{-70,79},{-50,99}})));
+      annotation (Placement(transformation(extent={{-49,81},{-29,101}})));
     ASM1.EffluentSink Effluent1
-                               annotation (Placement(transformation(extent={{-12,71},
-              {8,91}},        rotation=0)));
+                               annotation (Placement(transformation(extent={{-16,75},
+              {4,95}},        rotation=0)));
   equation
     connect(divider.Out1, Settler.Feed) annotation (Line(points={{40,6.6},{44,
             6.6},{44,6.4},{48,6.4}}));
@@ -260,7 +260,7 @@ Main Author:
     connect(mixer.Out, tank1.In) annotation (Line(points={{-84,31.6},{-80,31.6},
             {-80,32},{-76,32}}));
     connect(CombiTableTime.y, WWSource.data)
-      annotation (Line(points={{-93,88},{-93,70},{-101,70}}));
+      annotation (Line(points={{-93,88},{-93,63},{-108,63}}));
     connect(sensor_NO.In, tank2.MeasurePort) annotation (Line(points={{-32,48},
             {-32,36.5},{-32.5,36.5}}));
     connect(divider.Out2, RecyclePump.In) annotation (Line(points={{40,2.5},{44,
@@ -310,12 +310,12 @@ Main Author:
         points={{9.5,25},{11,25},{11,8.5},{9.5,8.5}},
         color={0,0,255},
         smooth=Smooth.None));
-    connect(WWSource.Out, mixer.In1) annotation (Line(
-        points={{-108,51.2},{-106,51.2},{-106,35.5},{-104,35.5}},
+    connect(wWSourceConstant.Out, Effluent1.In) annotation (Line(
+        points={{-29.2,84},{-23,84},{-23,87},{-16,87}},
         color={0,0,0},
         smooth=Smooth.None));
-    connect(wWSourceConstant.Out, Effluent1.In) annotation (Line(
-        points={{-50.2,82},{-31,82},{-31,83},{-12,83}},
+    connect(WWSource.Out, mixer.In1) annotation (Line(
+        points={{-115,44.2},{-115,35.5},{-104,35.5}},
         color={0,0,0},
         smooth=Smooth.None));
     annotation (
