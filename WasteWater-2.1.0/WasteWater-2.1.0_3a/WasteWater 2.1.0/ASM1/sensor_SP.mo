@@ -4,7 +4,7 @@ model sensor_SP "Ideal sensor to measure ammonium nitrogen"
   extends WasteWater.Icons.sensor_SP;
 
   Real T(start = 1e-3);
-  Real SP(start = 0);
+  Real PE(start = 0);
 
   Interfaces.WWFlowAsm1in r
     annotation (Placement(transformation(extent={{-100,-40},{-80,-20}})));
