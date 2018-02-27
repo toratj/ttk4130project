@@ -315,7 +315,7 @@ Main Author:
         color={0,0,0},
         smooth=Smooth.None));
     connect(WWSource.Out, mixer.In1) annotation (Line(
-        points={{-115,44.2},{-115,35.5},{-104,35.5}},
+        points={{-115,44.2},{-109.5,44.2},{-109.5,35.5},{-104,35.5}},
         color={0,0,0},
         smooth=Smooth.None));
     annotation (

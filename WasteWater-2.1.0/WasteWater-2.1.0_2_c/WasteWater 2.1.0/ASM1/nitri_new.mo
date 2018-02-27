@@ -23,6 +23,8 @@ model nitri_new "ASM1 nitrification tank"
           extent={{50,40},{60,50}}, rotation=0)));
   Modelica.Blocks.Interfaces.RealInput T annotation (Placement(transformation(
           extent={{-110,30},{-90,50}}, rotation=0)));
+  Modelica.Blocks.Interfaces.RealOutput KlaOut annotation (Placement(transformation(extent={{80,
+            -40},{100,-20}}, rotation=0)));
   Interfaces.AirFlow AirIn annotation (Placement(transformation(extent={{-5,
             -103},{5,-93}}, rotation=0)));
 equation
@@ -34,6 +36,8 @@ equation
   //aeration = (alpha*(So_sat - So)/So_sat*AirIn.Q_air*R_air*de)/V;
     aeration = Kla * (So_sat - So);
     So = 2;
+
+    KlaOut = Kla;
 
   // volume dependent dilution term of each concentration
 

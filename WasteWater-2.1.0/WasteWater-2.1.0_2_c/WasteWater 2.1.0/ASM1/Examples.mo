@@ -290,7 +290,7 @@ Main Author:
     connect(Effluent.In, Settler.Effluent) annotation (Line(points={{88,-16},{
             78.5,-16},{78.5,10.7},{68.2,10.7}}));
     connect(Constant2.y, ReturnPump.u)
-      annotation (Line(points={{21,-85},{39,-85},{39,-28},{37,-28},{37,-28.5},{
+      annotation (Line(points={{21,-85},{39,-85},{39,-28},{35,-28},{35,-28.5},{
             33.9,-28.5}},                                              color={0,
             0,255}));
     connect(sensor_TSS1.In, divider.Out1) annotation (Line(points={{40,15},{40,

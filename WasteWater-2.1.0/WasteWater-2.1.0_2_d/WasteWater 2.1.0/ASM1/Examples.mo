@@ -184,18 +184,20 @@ Main Author:
     //Q_air=12100.99290780142 is equal to a Kla of 3.5 h^-1 from COST benchmark
     extends Modelica.Icons.Example;
 
-    ASM1.EffluentSink Effluent annotation (Placement(transformation(extent={{88,
-              -28},{108,-8}}, rotation=0)));
+    ASM1.EffluentSink Effluent annotation (Placement(transformation(extent={{92,-1},
+              {112,19}},      rotation=0)));
     ASM1.SludgeSink WasteSludge annotation (Placement(transformation(extent={{
               87,-51},{107,-31}}, rotation=0)));
     ASM1.SecClarModTakacs Settler annotation (Placement(transformation(extent={
               {48,-5},{68,15}}, rotation=0)));
     ASM1.divider2 divider annotation (Placement(transformation(extent={{20,-6},
               {40,14}}, rotation=0)));
-    ASM1.nitri tank4(V=1333) annotation (Placement(transformation(extent={{-32,-6},
+    WasteWater.ASM1.tank34_2d
+               tank4(V=1333) annotation (Placement(transformation(extent={{-32,-6},
               {-12,14}},     rotation=0)));
-    ASM1.nitri tank3(V=1333) annotation (Placement(transformation(extent={{-60,
-              -6},{-40,14}}, rotation=0)));
+    WasteWater.ASM1.tank34_2d
+               tank3(V=1333) annotation (Placement(transformation(extent={{-61,-6},
+              {-41,14}},     rotation=0)));
     ASM1.deni tank2 annotation (Placement(transformation(extent={{-48,22},{-28,
               42}}, rotation=0)));
     ASM1.deni tank1 annotation (Placement(transformation(extent={{-76,22},{-56,
@@ -212,13 +214,9 @@ Main Author:
     ASM1.WWSource WWSource annotation (Placement(transformation(extent={{-10,-10},
               {10,10}},  rotation=270,
           origin={-108,54})));
-    ASM1.sensor_NO sensor_NO annotation (Placement(transformation(extent={{-42,
-              48},{-22,68}}, rotation=0)));
-    ASM1.sensor_O2 sensor_O2 annotation (Placement(transformation(extent={{1,25},
-              {18,42}}, rotation=0)));
     ASM1.pump RecyclePump(Q_min=0, Q_max=55338)
                                        annotation (Placement(transformation(
-          origin={-82,-13},
+          origin={-81,-13},
           extent={{-10,-10},{10,10}},
           rotation=180)));
     ASM1.pump ReturnPump(Q_max=18446) annotation (Placement(transformation(
@@ -230,42 +228,37 @@ Main Author:
     Modelica.Blocks.Sources.Constant Constant2(k=1)
                                                annotation (Placement(
           transformation(extent={{0,-95},{20,-75}},  rotation=0)));
-    sensor_NH sensor_NH1 annotation (Placement(transformation(extent={{64,15},{
-              80,31}}, rotation=0)));
-    WasteWater.ASM1.sensor_NO sensor_NO1 annotation (Placement(transformation(
-            extent={{81,15},{97,31}}, rotation=0)));
-    WasteWater.ASM1.sensor_TKN sensor_TKN1 annotation (Placement(transformation(
-            extent={{97,14},{113,30}}, rotation=0)));
-    WasteWater.ASM1.sensor_COD sensor_COD1 annotation (Placement(transformation(
-            extent={{97,-5},{113,11}}, rotation=0)));
-    WasteWater.ASM1.sensor_TSS sensor_TSS1 annotation (Placement(transformation(
-            extent={{32,15},{48,30}}, rotation=0)));
     Modelica.Blocks.Sources.Constant Constant3(k=1)
                                                annotation (Placement(
           transformation(extent={{-104,-70},{-84,-50}},rotation=0)));
     WasteWater.ASM1.nitri_new tank5
       annotation (Placement(transformation(extent={{-6,-6},{14,14}})));
-    WasteWater.ASM1.WWSourceConstant wWSourceConstant
-      annotation (Placement(transformation(extent={{-49,81},{-29,101}})));
-    ASM1.EffluentSink Effluent1
-                               annotation (Placement(transformation(extent={{-16,75},
-              {4,95}},        rotation=0)));
+    WasteWater.ASM1.sensor_AE sensor_AE annotation (Placement(transformation(
+          extent={{-10,-10},{10,10}},
+          rotation=90,
+          origin={26,68})));
+    WasteWater.ASM1.sensor_IQ sensor_iQ
+      annotation (Placement(transformation(extent={{-83,78},{-63,98}})));
+    WasteWater.ASM1.sensor_EQ sensor_EQ
+      annotation (Placement(transformation(extent={{71,43},{91,63}})));
+    WasteWater.ASM1.sensor_PE sensor_PE annotation (Placement(transformation(
+          extent={{-18,-16.5},{18,16.5}},
+          rotation=180,
+          origin={-29,-60.5})));
   equation
     connect(divider.Out1, Settler.Feed) annotation (Line(points={{40,6.6},{44,
             6.6},{44,6.4},{48,6.4}}));
-    connect(tank3.Out, tank4.In) annotation (Line(points={{-40,4},{-32,4}}));
-    connect(tank3.In, tank2.Out) annotation (Line(points={{-60,4},{-70,4},{-70,
+    connect(tank3.Out, tank4.In) annotation (Line(points={{-41,4},{-32,4}}));
+    connect(tank3.In, tank2.Out) annotation (Line(points={{-61,4},{-70,4},{-70,
             18},{-18,18},{-18,32},{-28,32}}));
     connect(tank1.Out, tank2.In) annotation (Line(points={{-56,32},{-48,32}}));
     connect(mixer.Out, tank1.In) annotation (Line(points={{-84,31.6},{-80,31.6},
             {-80,32},{-76,32}}));
     connect(CombiTableTime.y, WWSource.data)
       annotation (Line(points={{-93,88},{-93,63},{-108,63}}));
-    connect(sensor_NO.In, tank2.MeasurePort) annotation (Line(points={{-32,48},
-            {-32,36.5},{-32.5,36.5}}));
-    connect(divider.Out2, RecyclePump.In) annotation (Line(points={{40,2.5},{44,
-            2.5},{44,-9.7},{-72,-9.7}}));
-    connect(RecyclePump.Out, mixer.In3) annotation (Line(points={{-92,-15.8},{
+    connect(divider.Out2, RecyclePump.In) annotation (Line(points={{40,2.5},{34,
+            2.5},{34,-9.7},{-71,-9.7}}));
+    connect(RecyclePump.Out, mixer.In3) annotation (Line(points={{-91,-15.8},{
             -104,-15.8},{-104,27.5}}));
     connect(Settler.Return, ReturnPump.In) annotation (Line(points={{55,-4.6},{
             55,-22.7},{35,-22.7}}));
@@ -279,25 +272,15 @@ Main Author:
       annotation (Line(points={{59.1,-43.5},{46,-43.5},{46,-85},{21,-85}},
                                                                      color={0,0,
             255}));
-    connect(sensor_NH1.In, Settler.Effluent) annotation (Line(points={{72,15},{
-            72,10.7},{68.2,10.7}}));
-    connect(sensor_NO1.In, Settler.Effluent) annotation (Line(points={{89,15},{
-            89,10.7},{68.2,10.7}}));
-    connect(sensor_TKN1.In, Settler.Effluent) annotation (Line(points={{105,14},
-            {105,10.7},{68.2,10.7}}));
-    connect(sensor_COD1.In, Settler.Effluent) annotation (Line(points={{105,-5},
-            {105,10.7},{68.2,10.7}}));
-    connect(Effluent.In, Settler.Effluent) annotation (Line(points={{88,-16},{
-            78.5,-16},{78.5,10.7},{68.2,10.7}}));
+    connect(Effluent.In, Settler.Effluent) annotation (Line(points={{92,11},{
+            78.5,11},{78.5,10.7},{68.2,10.7}}));
     connect(Constant2.y, ReturnPump.u)
-      annotation (Line(points={{21,-85},{39,-85},{39,-28},{37,-28},{37,-28.5},{
+      annotation (Line(points={{21,-85},{39,-85},{39,-28},{35,-28},{35,-28.5},{
             33.9,-28.5}},                                              color={0,
             0,255}));
-    connect(sensor_TSS1.In, divider.Out1) annotation (Line(points={{40,15},{40,
-            10},{40,6.6}}));
 
     connect(Constant3.y, RecyclePump.u) annotation (Line(
-        points={{-83,-60},{-71,-60},{-71,-15.5},{-73.1,-15.5}},
+        points={{-83,-60},{-71,-60},{-71,-15.5},{-72.1,-15.5}},
         color={0,0,127},
         smooth=Smooth.None));
     connect(tank4.Out, tank5.In)
@@ -306,17 +289,29 @@ Main Author:
         points={{20,4.3},{18,4.3},{18,4},{14,4}},
         color={0,0,255},
         smooth=Smooth.None));
-    connect(sensor_O2.In, tank5.MeasurePort) annotation (Line(
-        points={{9.5,25},{11,25},{11,8.5},{9.5,8.5}},
-        color={0,0,255},
-        smooth=Smooth.None));
-    connect(wWSourceConstant.Out, Effluent1.In) annotation (Line(
-        points={{-29.2,84},{-23,84},{-23,87},{-16,87}},
-        color={0,0,0},
-        smooth=Smooth.None));
     connect(WWSource.Out, mixer.In1) annotation (Line(
         points={{-115,44.2},{-115,35.5},{-104,35.5}},
         color={0,0,0},
+        smooth=Smooth.None));
+    connect(tank3.Kla_out, sensor_AE.Kla3) annotation (Line(
+        points={{-51,7},{-37,7},{-37,59.6},{23.2,59.6}},
+        color={0,0,127},
+        smooth=Smooth.None));
+    connect(tank4.Kla_out, sensor_AE.Kla4) annotation (Line(
+        points={{-22,7},{-6,7},{-6,59.6},{27.8,59.6}},
+        color={0,0,127},
+        smooth=Smooth.None));
+    connect(tank5.KlaOut, sensor_AE.Kla5) annotation (Line(
+        points={{3.9,7.1},{3.9,22.55},{33,22.55},{33,59.4}},
+        color={0,0,127},
+        smooth=Smooth.None));
+    connect(sensor_iQ.i, mixer.In1) annotation (Line(
+        points={{-73,78},{-91,78},{-91,38},{-115,38},{-115,35.5},{-104,35.5}},
+        color={0,0,255},
+        smooth=Smooth.None));
+    connect(sensor_EQ.e, Settler.Effluent) annotation (Line(
+        points={{81,43},{86,43},{86,11},{78.5,11},{78.5,10.7},{68.2,10.7}},
+        color={0,0,255},
         smooth=Smooth.None));
     annotation (
       Window(
