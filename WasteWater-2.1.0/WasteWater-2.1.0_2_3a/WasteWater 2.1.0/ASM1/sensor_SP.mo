@@ -4,7 +4,7 @@ model sensor_SP "Ideal sensor to measure ammonium nitrogen"
   extends WasteWater.Icons.sensor_SP;
 
   Real T(start = 1e-3);
-  Real PE(start = 0);
+  Real SP(start = 0);
 
   Interfaces.WWFlowAsm1in r
     annotation (Placement(transformation(extent={{-100,-40},{-80,-20}})));
@@ -62,8 +62,9 @@ equation
     Documentation(info="This component measures the ammonium nitrogen concentration [g/m3]
 of ASM1 wastewater and provides the result as output signal (to be
 further processed with blocks of the Modelica.Blocks library).
-"), Diagram(coordinateSystem(preserveAspectRatio=false, extent={{-100,-100},{100,
-            100}}), graphics),
+"), Diagram(coordinateSystem(preserveAspectRatio=false, extent={{-100,-100},{
+            100,100}}),
+                    graphics),
     Icon(coordinateSystem(preserveAspectRatio=false, extent={{-100,-100},{100,100}}),
         graphics));
 end sensor_SP;

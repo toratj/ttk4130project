@@ -2,8 +2,8 @@ within WasteWater.ASM1;
 model sensor_EQ "Ideal sensor to measure ammonium nitrogen"
 
   extends WasteWater.Icons.sensor_EQ;
-  Interfaces.WWFlowAsm1in e annotation (Placement(transformation(extent={{-10,
-            -110},{10,-90}}, rotation=0)));
+  Interfaces.WWFlowAsm1in e annotation (Placement(transformation(extent={{-90,-10},
+            {-70,10}},       rotation=0)));
 
   Real T(start = 1e-3);
   Real EQ(start = 0);
@@ -20,9 +20,13 @@ model sensor_EQ "Ideal sensor to measure ammonium nitrogen"
   parameter Real Bnkj = 30;
   parameter Real Bno = 10;
   parameter Real Bbod5 = 2;
-  Interfaces.WWFlowAsm1out e_out
-    annotation (Placement(transformation(extent={{80,-10},{100,10}})));
 
+  Modelica.Blocks.Interfaces.RealOutput EQ_out
+    annotation (Placement(transformation(extent={{-16,-16},{16,16}},
+        rotation=90,
+        origin={0,104})));
+  Interfaces.WWFlowAsm1out e_out
+    annotation (Placement(transformation(extent={{76,-10},{96,10}})));
 equation
   Snkj_e = e.Snh + e.Snd + e.Xnd + Ixb*( e.Xbh + e.Xba) + Ixp*(e.Xp + e.Xi);
   SS_e = 0.75 * (e.Xs + e.Xi + e.Xbh + e.Xba + e.Xp);
@@ -31,6 +35,8 @@ equation
 
   der(T) = 1.0;
   der(T*EQ) = (Bss*SS_e + Bcod*COD_e + Bnkj*Snkj_e + Bno*e.Sno + Bbod5*BOD_e)*abs(e.Q)/1000;
+
+  EQ_out = EQ;
 
   e.Q + e_out.Q = 0;
   e.Si = e_out.Si;
@@ -56,5 +62,6 @@ equation
     Documentation(info="This component measures the ammonium nitrogen concentration [g/m3]
 of ASM1 wastewater and provides the result as output signal (to be
 further processed with blocks of the Modelica.Blocks library).
-"));
+"), Diagram(coordinateSystem(preserveAspectRatio=false, extent={{-100,-100},{100,
+            100}}), graphics));
 end sensor_EQ;

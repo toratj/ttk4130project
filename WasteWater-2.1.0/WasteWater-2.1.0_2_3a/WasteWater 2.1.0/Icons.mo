@@ -6591,8 +6591,9 @@ package Icons "Icon definitions for the WasteWater library"
             lineColor={0,0,0},
             fillColor={0,0,0},
             fillPattern=FillPattern.Solid),
-          Text(extent={{-36,-10},{36,-32}}, textString=
-                                                "EQ"),
+          Text(extent={{-36,-10},{36,-32}},
+            textString="EQ",
+            lineColor={0,0,0}),
           Line(
             points={{0,-50},{0,-90}},
             color={0,0,0},
@@ -6648,6 +6649,550 @@ package Icons "Icon definitions for the WasteWater library"
             thickness=0.5),
           Line(points={{50,0},{88,0}}, color={0,0,0})}));
   end sensor_EQ;
+
+  partial model sensor_PE "Icon for an oxygen sensor"
+
+    annotation (
+      Window(
+        x=0.45,
+        y=0.01,
+        width=0.35,
+        height=0.49),
+      Icon(coordinateSystem(
+          preserveAspectRatio=false,
+          extent={{-100,-100},{100,100}},
+          grid={2,2}), graphics={
+          Ellipse(
+            extent={{-50,50},{50,-50}},
+            lineColor={0,0,0},
+            lineThickness=0.5,
+            fillColor={223,223,159},
+            fillPattern=FillPattern.Solid),
+          Text(extent={{-98,98},{100,60}}, textString=
+                                               "%name"),
+          Line(
+            points={{0,50},{0,38}},
+            color={0,0,0},
+            thickness=0.5),
+          Line(
+            points={{-50,0},{38,0}},
+            color={0,0,0},
+            thickness=0.5),
+          Line(
+            points={{50,0},{38,0}},
+            color={0,0,0},
+            thickness=0.5),
+          Line(
+            points={{-36,34},{-28,26}},
+            color={0,0,0},
+            thickness=0.5),
+          Line(
+            points={{34,36},{26,28}},
+            color={0,0,0},
+            thickness=0.5),
+          Line(
+            points={{0,0},{26,28}},
+            color={0,0,0},
+            thickness=0.5),
+          Polygon(
+            points={{30,32},{10,24},{24,12},{30,32}},
+            lineColor={0,0,0},
+            fillColor={0,0,0},
+            fillPattern=FillPattern.Solid),
+          Text(extent={{-36,-10},{36,-32}},
+            lineColor={0,0,0},
+            textString="PE
+"),       Line(
+            points={{0,-50},{0,-90}},
+            color={0,0,0},
+            thickness=0.5),
+          Line(points={{50,0},{88,0}}, color={0,0,0})}),
+      Documentation(info="Icon for an oxygen sensor "),
+      Diagram(coordinateSystem(
+          preserveAspectRatio=false,
+          extent={{-100,-100},{100,100}},
+          grid={2,2}), graphics={
+          Ellipse(
+            extent={{-50,50},{50,-50}},
+            lineColor={0,0,0},
+            lineThickness=0.5,
+            fillColor={223,223,159},
+            fillPattern=FillPattern.Solid),
+          Text(extent={{-98,100},{100,60}}, textString=
+                                                "%name"),
+          Line(
+            points={{0,50},{0,38}},
+            color={0,0,0},
+            thickness=0.5),
+          Line(
+            points={{-50,0},{38,0}},
+            color={0,0,0},
+            thickness=0.5),
+          Line(
+            points={{50,0},{38,0}},
+            color={0,0,0},
+            thickness=0.5),
+          Line(
+            points={{-36,34},{-28,26}},
+            color={0,0,0},
+            thickness=0.5),
+          Line(
+            points={{34,36},{26,28}},
+            color={0,0,0},
+            thickness=0.5),
+          Line(
+            points={{0,0},{26,28}},
+            color={0,0,0},
+            thickness=0.5),
+          Polygon(
+            points={{30,32},{10,24},{24,12},{30,32}},
+            lineColor={0,0,0},
+            fillColor={0,0,0},
+            fillPattern=FillPattern.Solid),
+          Text(extent={{-36,-10},{36,-32}},
+            textString="PE
+",          lineColor={0,0,0}),
+          Line(
+            points={{0,-50},{0,-90}},
+            color={0,0,0},
+            thickness=0.5),
+          Line(points={{50,0},{88,0}}, color={0,0,0})}));
+  end sensor_PE;
+
+  partial model sensor_SP "Icon for an oxygen sensor"
+
+    annotation (
+      Window(
+        x=0.45,
+        y=0.01,
+        width=0.35,
+        height=0.49),
+      Icon(coordinateSystem(
+          preserveAspectRatio=false,
+          extent={{-100,-100},{100,100}},
+          grid={2,2}), graphics={
+          Ellipse(
+            extent={{-50,50},{50,-50}},
+            lineColor={0,0,0},
+            lineThickness=0.5,
+            fillColor={223,223,159},
+            fillPattern=FillPattern.Solid),
+          Text(extent={{-98,98},{100,60}}, textString=
+                                               "%name"),
+          Line(
+            points={{0,50},{0,38}},
+            color={0,0,0},
+            thickness=0.5),
+          Line(
+            points={{-50,0},{38,0}},
+            color={0,0,0},
+            thickness=0.5),
+          Line(
+            points={{50,0},{38,0}},
+            color={0,0,0},
+            thickness=0.5),
+          Line(
+            points={{-36,34},{-28,26}},
+            color={0,0,0},
+            thickness=0.5),
+          Line(
+            points={{34,36},{26,28}},
+            color={0,0,0},
+            thickness=0.5),
+          Line(
+            points={{0,0},{26,28}},
+            color={0,0,0},
+            thickness=0.5),
+          Polygon(
+            points={{30,32},{10,24},{24,12},{30,32}},
+            lineColor={0,0,0},
+            fillColor={0,0,0},
+            fillPattern=FillPattern.Solid),
+          Text(extent={{-36,-10},{36,-32}},
+            lineColor={0,0,0},
+            textString="SP"),
+          Line(
+            points={{0,-50},{0,-90}},
+            color={0,0,0},
+            thickness=0.5),
+          Line(points={{50,0},{88,0}}, color={0,0,0})}),
+      Documentation(info="Icon for an oxygen sensor "),
+      Diagram(coordinateSystem(
+          preserveAspectRatio=false,
+          extent={{-100,-100},{100,100}},
+          grid={2,2}), graphics={
+          Ellipse(
+            extent={{-50,50},{50,-50}},
+            lineColor={0,0,0},
+            lineThickness=0.5,
+            fillColor={223,223,159},
+            fillPattern=FillPattern.Solid),
+          Text(extent={{-98,100},{100,60}}, textString=
+                                                "%name"),
+          Line(
+            points={{0,50},{0,38}},
+            color={0,0,0},
+            thickness=0.5),
+          Line(
+            points={{-50,0},{38,0}},
+            color={0,0,0},
+            thickness=0.5),
+          Line(
+            points={{50,0},{38,0}},
+            color={0,0,0},
+            thickness=0.5),
+          Line(
+            points={{-36,34},{-28,26}},
+            color={0,0,0},
+            thickness=0.5),
+          Line(
+            points={{34,36},{26,28}},
+            color={0,0,0},
+            thickness=0.5),
+          Line(
+            points={{0,0},{26,28}},
+            color={0,0,0},
+            thickness=0.5),
+          Polygon(
+            points={{30,32},{10,24},{24,12},{30,32}},
+            lineColor={0,0,0},
+            fillColor={0,0,0},
+            fillPattern=FillPattern.Solid),
+          Text(extent={{-36,-10},{36,-32}},
+            lineColor={0,0,0},
+            textString="SP"),
+          Line(
+            points={{0,-50},{0,-90}},
+            color={0,0,0},
+            thickness=0.5),
+          Line(points={{50,0},{88,0}}, color={0,0,0})}));
+  end sensor_SP;
+
+  partial model sensor_IQ "Icon for an oxygen sensor"
+
+    annotation (
+      Window(
+        x=0.45,
+        y=0.01,
+        width=0.35,
+        height=0.49),
+      Icon(coordinateSystem(
+          preserveAspectRatio=false,
+          extent={{-100,-100},{100,100}},
+          grid={2,2}), graphics={
+          Ellipse(
+            extent={{-50,50},{50,-50}},
+            lineColor={0,0,0},
+            lineThickness=0.5,
+            fillColor={223,223,159},
+            fillPattern=FillPattern.Solid),
+          Text(extent={{-98,98},{100,60}}, textString=
+                                               "%name"),
+          Line(
+            points={{0,50},{0,38}},
+            color={0,0,0},
+            thickness=0.5),
+          Line(
+            points={{-50,0},{38,0}},
+            color={0,0,0},
+            thickness=0.5),
+          Line(
+            points={{50,0},{38,0}},
+            color={0,0,0},
+            thickness=0.5),
+          Line(
+            points={{-36,34},{-28,26}},
+            color={0,0,0},
+            thickness=0.5),
+          Line(
+            points={{34,36},{26,28}},
+            color={0,0,0},
+            thickness=0.5),
+          Line(
+            points={{0,0},{26,28}},
+            color={0,0,0},
+            thickness=0.5),
+          Polygon(
+            points={{30,32},{10,24},{24,12},{30,32}},
+            lineColor={0,0,0},
+            fillColor={0,0,0},
+            fillPattern=FillPattern.Solid),
+          Text(extent={{-36,-10},{36,-32}},
+            lineColor={0,0,0},
+            textString="IQ"),
+          Line(
+            points={{0,-50},{0,-90}},
+            color={0,0,0},
+            thickness=0.5),
+          Line(points={{50,0},{88,0}}, color={0,0,0})}),
+      Documentation(info="Icon for an oxygen sensor "),
+      Diagram(coordinateSystem(
+          preserveAspectRatio=false,
+          extent={{-100,-100},{100,100}},
+          grid={2,2}), graphics={
+          Ellipse(
+            extent={{-50,50},{50,-50}},
+            lineColor={0,0,0},
+            lineThickness=0.5,
+            fillColor={223,223,159},
+            fillPattern=FillPattern.Solid),
+          Text(extent={{-98,100},{100,60}}, textString=
+                                                "%name"),
+          Line(
+            points={{0,50},{0,38}},
+            color={0,0,0},
+            thickness=0.5),
+          Line(
+            points={{-50,0},{38,0}},
+            color={0,0,0},
+            thickness=0.5),
+          Line(
+            points={{50,0},{38,0}},
+            color={0,0,0},
+            thickness=0.5),
+          Line(
+            points={{-36,34},{-28,26}},
+            color={0,0,0},
+            thickness=0.5),
+          Line(
+            points={{34,36},{26,28}},
+            color={0,0,0},
+            thickness=0.5),
+          Line(
+            points={{0,0},{26,28}},
+            color={0,0,0},
+            thickness=0.5),
+          Polygon(
+            points={{30,32},{10,24},{24,12},{30,32}},
+            lineColor={0,0,0},
+            fillColor={0,0,0},
+            fillPattern=FillPattern.Solid),
+          Text(extent={{-36,-10},{36,-32}},
+            lineColor={0,0,0},
+            textString="IQ"),
+          Line(
+            points={{0,-50},{0,-90}},
+            color={0,0,0},
+            thickness=0.5),
+          Line(points={{50,0},{88,0}}, color={0,0,0})}));
+  end sensor_IQ;
+
+  partial model sensor_ME "Icon for an oxygen sensor"
+    annotation (
+      Window(
+        x=0.45,
+        y=0.01,
+        width=0.35,
+        height=0.49),
+      Icon(coordinateSystem(
+          preserveAspectRatio=false,
+          extent={{-100,-100},{100,100}},
+          grid={2,2}), graphics={
+          Ellipse(
+            extent={{-50,50},{50,-50}},
+            lineColor={0,0,0},
+            lineThickness=0.5,
+            fillColor={223,223,159},
+            fillPattern=FillPattern.Solid),
+          Text(extent={{-98,98},{100,60}}, textString=
+                                               "%name"),
+          Line(
+            points={{0,50},{0,38}},
+            color={0,0,0},
+            thickness=0.5),
+          Line(
+            points={{-50,0},{38,0}},
+            color={0,0,0},
+            thickness=0.5),
+          Line(
+            points={{50,0},{38,0}},
+            color={0,0,0},
+            thickness=0.5),
+          Line(
+            points={{-36,34},{-28,26}},
+            color={0,0,0},
+            thickness=0.5),
+          Line(
+            points={{34,36},{26,28}},
+            color={0,0,0},
+            thickness=0.5),
+          Line(
+            points={{0,0},{26,28}},
+            color={0,0,0},
+            thickness=0.5),
+          Polygon(
+            points={{30,32},{10,24},{24,12},{30,32}},
+            lineColor={0,0,0},
+            fillColor={0,0,0},
+            fillPattern=FillPattern.Solid),
+          Text(extent={{-36,-10},{36,-32}},
+            textString="ME",
+            lineColor={0,0,0}),
+          Line(
+            points={{0,-50},{0,-90}},
+            color={0,0,0},
+            thickness=0.5),
+          Line(points={{50,0},{88,0}}, color={0,0,0})}),
+      Documentation(info="Icon for an oxygen sensor "),
+      Diagram(coordinateSystem(
+          preserveAspectRatio=false,
+          extent={{-100,-100},{100,100}},
+          grid={2,2}), graphics={
+          Ellipse(
+            extent={{-50,50},{50,-50}},
+            lineColor={0,0,0},
+            lineThickness=0.5,
+            fillColor={223,223,159},
+            fillPattern=FillPattern.Solid),
+          Text(extent={{-98,100},{100,60}}, textString=
+                                                "%name"),
+          Line(
+            points={{0,50},{0,38}},
+            color={0,0,0},
+            thickness=0.5),
+          Line(
+            points={{-50,0},{38,0}},
+            color={0,0,0},
+            thickness=0.5),
+          Line(
+            points={{50,0},{38,0}},
+            color={0,0,0},
+            thickness=0.5),
+          Line(
+            points={{-36,34},{-28,26}},
+            color={0,0,0},
+            thickness=0.5),
+          Line(
+            points={{34,36},{26,28}},
+            color={0,0,0},
+            thickness=0.5),
+          Line(
+            points={{0,0},{26,28}},
+            color={0,0,0},
+            thickness=0.5),
+          Polygon(
+            points={{30,32},{10,24},{24,12},{30,32}},
+            lineColor={0,0,0},
+            fillColor={0,0,0},
+            fillPattern=FillPattern.Solid),
+          Text(extent={{-36,-10},{36,-32}},
+            textString="ME
+",
+            lineColor={0,0,0}),
+          Line(
+            points={{0,-50},{0,-90}},
+            color={0,0,0},
+            thickness=0.5),
+          Line(points={{50,0},{88,0}}, color={0,0,0})}));
+  end sensor_ME;
+
+  partial model sensor_OCI "Icon for a total suspended solids sensor"
+    annotation (
+      Window(
+        x=0.45,
+        y=0.01,
+        width=0.35,
+        height=0.49),
+      Icon(coordinateSystem(
+          preserveAspectRatio=false,
+          extent={{-100,-100},{100,100}},
+          grid={2,2}), graphics={
+          Ellipse(
+            extent={{-50,50},{50,-50}},
+            lineColor={0,0,0},
+            lineThickness=0.5,
+            fillColor={223,223,159},
+            fillPattern=FillPattern.Solid),
+          Text(extent={{-100,100},{100,60}}, textString=
+                                                 "%name"),
+          Line(
+            points={{0,50},{0,38}},
+            color={0,0,0},
+            thickness=0.5),
+          Line(
+            points={{-50,0},{38,0}},
+            color={0,0,0},
+            thickness=0.5),
+          Line(
+            points={{50,0},{38,0}},
+            color={0,0,0},
+            thickness=0.5),
+          Line(
+            points={{-36,34},{-28,26}},
+            color={0,0,0},
+            thickness=0.5),
+          Line(
+            points={{34,36},{26,28}},
+            color={0,0,0},
+            thickness=0.5),
+          Line(
+            points={{0,0},{26,28}},
+            color={0,0,0},
+            thickness=0.5),
+          Polygon(
+            points={{30,32},{10,24},{24,12},{30,32}},
+            lineColor={0,0,0},
+            fillColor={0,0,0},
+            fillPattern=FillPattern.Solid),
+          Text(extent={{-36,-10},{36,-32}},
+            textString="OCI",
+            lineColor={0,0,0}),
+          Line(
+            points={{0,-50},{0,-90}},
+            color={0,0,0},
+            thickness=0.5),
+          Line(points={{50,0},{88,0}}, color={0,0,0})}),
+      Documentation(info="Icon for a total suspended solids sensor "),
+      Diagram(coordinateSystem(
+          preserveAspectRatio=false,
+          extent={{-100,-100},{100,100}},
+          grid={2,2}), graphics={
+          Ellipse(
+            extent={{-50,50},{50,-50}},
+            lineColor={0,0,0},
+            lineThickness=0.5,
+            fillColor={223,223,159},
+            fillPattern=FillPattern.Solid),
+          Text(extent={{-98,100},{100,60}}, textString=
+                                                "%name"),
+          Line(
+            points={{0,50},{0,38}},
+            color={0,0,0},
+            thickness=0.5),
+          Line(
+            points={{-50,0},{38,0}},
+            color={0,0,0},
+            thickness=0.5),
+          Line(
+            points={{50,0},{38,0}},
+            color={0,0,0},
+            thickness=0.5),
+          Line(
+            points={{-36,34},{-28,26}},
+            color={0,0,0},
+            thickness=0.5),
+          Line(
+            points={{34,36},{26,28}},
+            color={0,0,0},
+            thickness=0.5),
+          Line(
+            points={{0,0},{26,28}},
+            color={0,0,0},
+            thickness=0.5),
+          Polygon(
+            points={{30,32},{10,24},{24,12},{30,32}},
+            lineColor={0,0,0},
+            fillColor={0,0,0},
+            fillPattern=FillPattern.Solid),
+          Text(extent={{-36,-10},{36,-32}},
+            textString="OCI",
+            lineColor={0,0,0}),
+          Line(
+            points={{0,-50},{0,-90}},
+            color={0,0,0},
+            thickness=0.5),
+          Line(points={{50,0},{88,0}}, color={0,0,0})}));
+  end sensor_OCI;
   annotation (
     Window(
       x=0.45,

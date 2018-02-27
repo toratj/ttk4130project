@@ -12,7 +12,9 @@ model nitri_new "ASM1 nitrification tank"
   parameter Real alpha=0.7 "Oxygen transfer factor";
   parameter Modelica.SIunits.Length de=4.5 "depth of aeration";
   parameter Real R_air=23.5 "specific oxygen feed factor [gO2/(m^3*m)]";
-  Real Kla;
+  parameter Real Kla = 84;
+  Real So;
+  Real aeration;
   WWU.MassConcentration So_sat = 8 "Dissolved oxygen saturation";
 
   Interfaces.WWFlowAsm1in In annotation (Placement(transformation(extent={{-110,
@@ -38,7 +40,6 @@ equation
   // Simulationtimeunit [m3*day^-1]
   //aeration = (alpha*(So_sat - So)/So_sat*AirIn.Q_air*R_air*de)/V;
     aeration = Kla * (So_sat - So);
-    So = 2;
 
     KlaOut = Kla;
 
