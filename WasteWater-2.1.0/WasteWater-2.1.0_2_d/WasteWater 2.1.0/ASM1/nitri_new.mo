@@ -23,7 +23,7 @@ model nitri_new "ASM1 nitrification tank"
           extent={{50,40},{60,50}}, rotation=0)));
   Modelica.Blocks.Interfaces.RealInput T annotation (Placement(transformation(
           extent={{-110,30},{-90,50}}, rotation=0)));
-  Modelica.Blocks.Interfaces.RealOutput KlaOut1 annotation (Placement(
+  Modelica.Blocks.Interfaces.RealOutput KlaOut annotation (Placement(
         transformation(
         extent={{-11,-11},{11,11}},
         rotation=90,
@@ -58,10 +58,6 @@ equation
   inputXnd = (In.Xnd - Xnd)*In.Q/V;
   inputSalk = (In.Salk - Salk)*In.Q/V;
 
-  connect(KlaOut1, KlaOut1) annotation (Line(
-      points={{-1,31},{-1,31}},
-      color={0,0,127},
-      smooth=Smooth.None));
   annotation (
     Window(
       x=0.34,
@@ -80,6 +76,8 @@ Parameters:
   alpha - oxygen transfer factor
   de    - depth of the aeration system [m]
   R_air - specific oxygen feed factor [g O2/(m3*m)]
-"), Diagram(coordinateSystem(preserveAspectRatio=false, extent={{-100,-100},{
-            100,100}}), graphics));
+"), Diagram(coordinateSystem(preserveAspectRatio=false, extent={{-100,-100},{100,
+            100}}),     graphics),
+    Icon(coordinateSystem(preserveAspectRatio=false, extent={{-100,-100},{100,100}}),
+        graphics));
 end nitri_new;

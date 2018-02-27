@@ -2,8 +2,6 @@ within WasteWater.ASM1;
 model sensor_SP "Ideal sensor to measure ammonium nitrogen"
 
   extends WasteWater.Icons.sensor_SP;
-  Interfaces.WWFlowAsm1in e annotation (Placement(transformation(extent={{-10,
-            -110},{10,-90}}, rotation=0)));
 
   Real T(start = 1e-3);
   Real PE(start = 0);
@@ -17,23 +15,6 @@ model sensor_SP "Ideal sensor to measure ammonium nitrogen"
   Interfaces.WWFlowAsm1out r_out
     annotation (Placement(transformation(extent={{80,-40},{100,-20}})));
   Modelica.Blocks.Interfaces.RealOutput SP_out
-    annotation (Placement(transformation(extent={{50,-10},{70,10}})));
-  Modelica.Blocks.Interfaces.RealInput Qa annotation (Placement(
-        transformation(
-        extent={{-9,-9},{9,9}},
-        rotation=90,
-        origin={-41,-97})));
-  Modelica.Blocks.Interfaces.RealInput Qr annotation (Placement(
-        transformation(
-        extent={{-9,-9},{9,9}},
-        rotation=90,
-        origin={-1,-97})));
-  Modelica.Blocks.Interfaces.RealInput Qw annotation (Placement(
-        transformation(
-        extent={{-9,-9},{9,9}},
-        rotation=90,
-        origin={41,-97})));
-  Modelica.Blocks.Interfaces.RealOutput PE_out
     annotation (Placement(transformation(extent={{50,-10},{70,10}})));
 
 equation
@@ -81,5 +62,8 @@ equation
     Documentation(info="This component measures the ammonium nitrogen concentration [g/m3]
 of ASM1 wastewater and provides the result as output signal (to be
 further processed with blocks of the Modelica.Blocks library).
-"));
+"), Diagram(coordinateSystem(preserveAspectRatio=false, extent={{-100,-100},{100,
+            100}}), graphics),
+    Icon(coordinateSystem(preserveAspectRatio=false, extent={{-100,-100},{100,100}}),
+        graphics));
 end sensor_SP;

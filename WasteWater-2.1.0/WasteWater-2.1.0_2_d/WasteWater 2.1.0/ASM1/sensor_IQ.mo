@@ -2,11 +2,11 @@ within WasteWater.ASM1;
 model sensor_IQ "Ideal sensor to measure ammonium nitrogen"
 
   extends WasteWater.Icons.sensor_IQ;
-  Interfaces.WWFlowAsm1in i annotation (Placement(transformation(extent={{-10,
+  WasteWater.ASM1.Interfaces.WWFlowAsm1in i annotation (Placement(transformation(extent={{-10,
             -110},{10,-90}}, rotation=0)));
 
   Real T(start = 1e-3);
-  Real PE(start = 0);
+  Real IQ(start = 0);
   Real SS_e;
   Real Snkj_e;
   Real BOD_e;
@@ -21,7 +21,7 @@ model sensor_IQ "Ideal sensor to measure ammonium nitrogen"
   parameter Real Bno = 10;
   parameter Real Bbod5 = 2;
 
-  Interfaces.WWFlowAsm1out i_out
+  WasteWater.ASM1.Interfaces.WWFlowAsm1out i_out
     annotation (Placement(transformation(extent={{80,-10},{100,10}})));
 
 equation
